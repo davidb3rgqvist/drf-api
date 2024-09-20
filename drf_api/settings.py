@@ -114,7 +114,8 @@ MIDDLEWARE = [
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
-        os.environ.get('CLIENT_ORIGIN')
+        'https://drf-be-3512290af8c0.herokuapp.com',
+        os.environ.get('CLIENT_ORIGIN', '')
     ]
 else:
     CORS_ALLOWED_ORIGIN_REGEXES = [
