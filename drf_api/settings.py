@@ -66,7 +66,7 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
-    'https://3000-davidb3rgqvist-moments3-63lsq7dtdti.ws.codeinstitute-ide.net',
+    '8000-davidb3rgqvist-drfapi-posqswwa3qq.ws.codeinstitute-ide.net',
     '127.0.0.1',
 ]
 
