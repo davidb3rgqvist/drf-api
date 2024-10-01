@@ -32,9 +32,13 @@ class PostSerializer(serializers.ModelSerializer):
         return None
 
     def create(self, validated_data):
+        # Pop image separately from validated data
         image = validated_data.pop('image', None)
+
+        # Create the Post object without the image initially
         post = Post.objects.create(**validated_data)
 
+        # If an image was provided, assign it to the post and save again
         if image:
             post.image = image
             post.save()
